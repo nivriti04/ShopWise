@@ -15,10 +15,12 @@
   "author": "Nivriti Bajwa",
   "license": "MIT",
   "dependencies": {
+    "@reduxjs/toolkit": "^2.2.2",
     "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
     "express": "^4.19.2",
-    "mongoose": "^8.2.3"
+    "mongoose": "^8.2.3",
+    "react-redux": "^9.1.0"
   },
   "devDependencies": {
     "concurrently": "^8.2.2",
