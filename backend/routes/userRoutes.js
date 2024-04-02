@@ -16,7 +16,7 @@ import { protect, admin } from "../middleware/authMiddleware.js";
 //all of these are connected by /api/users
 router.route("/").post(registerUser).get(protect, admin, getUsers);
 router.post("/logout", logoutUser);
-router.post("/login", authUser);
+router.post("/auth", authUser);
 router
   .route("/profile")
   .get(protect, getUserProfile)
