@@ -7,7 +7,7 @@ import { FaTimes } from "react-icons/fa";
 import { toast } from "react-toastify";
 import Message from "../components/Message";
 import Loader from "../components/Loader";
-import { useProfileMutation } from "../slices/userApiSlice";
+import { useProfileMutation } from "../slices/usersApiSlice";
 import { useGetMyOrdersQuery } from "../slices/ordersApiSlice";
 import { setCredentials } from "../slices/authSlice";
 
@@ -21,7 +21,8 @@ const ProfileScreen = () => {
   const { userInfo } = useSelector((state) => state.auth);
 
   const { data: orders, isLoading, error } = useGetMyOrdersQuery();
-  const [updateProfile, { isLoading: loadingUpdateProfile }] = useProfileMutation();
+  const [updateProfile, { isLoading: loadingUpdateProfile }] =
+    useProfileMutation();
 
   useEffect(() => {
     if (userInfo) {
